@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Management System</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Team Task Manager</h1>
+
+    <div class="login-box" id="loginBox">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Enter username" required />
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div class="dashboard" id="dashboard" style="display:none;">
+      <h2>Welcome, <span id="userDisplay"></span>!</h2>
+
+      <div class="task-form">
+        <input type="text" id="taskTitle" placeholder="Task Title" />
+        <input type="text" id="taskDesc" placeholder="Description" />
+        <input type="date" id="taskDue" />
+        <input type="text" id="taskAssign" placeholder="Assign to (username)" />
+        <select id="taskStatus">
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+      </div>
+
+      <div class="task-list" id="taskList"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
